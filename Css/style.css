@@ -1,0 +1,167 @@
+/* Estilos gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/*Aqui eu declarei variáveis para as cores e fontes*/
+/*Here i */
+:root {
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Font-family-primary: 'Montserrat', sans-serif;
+    --Font-family-secondary: 'Fraunces', serif;
+
+}
+
+
+body {
+    background: var(--Cream);
+    max-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+
+}
+/*Aqui eu defini o display flex do container pai */
+.container-pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem;
+}
+/* Estilo do cartão */
+
+/* Cartão-imagem */
+
+.imagem {
+    height: 69vh;
+    border-radius: 10px 0px 0px 10px;
+}
+
+/* Informações do produto*/
+.infos {
+    height: 69vh;
+    width: 20vw;
+    background-color: var(--White);
+    font-size: 1em;
+    padding: 1.5em;
+    border-radius: 0px 10px 10px 0px;
+    
+}
+/*Estilo da classificação perfume */
+.perfume {
+    font-family: var(--Font-family-primary);
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--Dark-grayish-blue);
+}
+/*Estilo do título*/
+.infos h1 {
+    font-size: 2em;
+    color: var(--Very-dark-blue);
+    font-family: var(--Font-family-secondary);
+    
+}
+/*Estilo do paragráfo*/
+.infos p {
+    font-size: 1rem;
+    color: var(--Dark-grayish-blue);
+    font-family: var(--Font-family-primary);
+    font-weight: 500;
+    padding-top: 0.8rem;
+}
+/*Aqui defini mais um conteiner para colocar display flex nos preços do perfume*/
+.price-conteiner {
+    display: flex;
+    
+} 
+/*Prço com Promoção*/
+.new-price p {
+    color: var(--Dark-cyan);
+    font-size: 1.5rem;
+    font-family: var(--Font-family-secondary);
+    margin-right: 1.5rem;
+}
+/*Preço antigo*/
+.old-price p {
+    text-decoration: line-through;
+    font-family: var(--Font-family-primary);
+    margin-top: 5px;
+    
+}
+/*estilo do Botão*/
+.botao {
+    background: var(--Dark-cyan);
+    font-family: var(--Font-family-primary);
+    color: var(--White);
+    border: none;
+    width: 100%;
+    height: 50px;
+    padding: 4px;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+/*EStilo da atribuição*/
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+    bottom: 1rem;
+
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Início do layout Mobile
+*/
+@media (max-width:500px) 
+{
+    .container-pai {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        
+    }
+
+    .imagem {
+        height: 40vh;
+        width: 80vw;
+        border-radius: 10px 10px 0px 0px;
+    }
+    
+    .infos {
+        background-color: var(--White);
+        width: 80vw;
+        height: 65vw;
+        font-size: 0.5em;
+        border-radius: 0px 0px 10px 10px;
+        
+        
+    }
+
+    .infos h1 {
+        font-size: 1.6rem;
+        color: var(--Very-dark-blue);
+        font-family: var(--Font-family-secondary);
+        
+    }
+    .perfume {
+        font-family: var(--Font-family-primary);
+        font-size: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: var(--Dark-grayish-blue);
+        padding-bottom: 0.5rem;
+    }
+    
+}
