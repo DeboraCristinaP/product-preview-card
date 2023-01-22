@@ -122,7 +122,7 @@ body {
 
 /*Início do layout Mobile
 */
-@media (max-width:500px) 
+@media (max-width:375px) 
 {
     .container-pai {
         display: flex;
